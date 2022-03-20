@@ -37,4 +37,12 @@ object genericList extends App {
 
   }
 
+  val listOfIntegers: genericList[Int] = Empty
+  val listOfStrings: genericList[String] = Empty
+
+  val listOfIntegers2: genericList[Int] = new Cons[Int](1,(new Cons[Int](2, new Cons[Int](3, Empty))))
+  val listOfStrings2: genericList[String] = new Cons[String]("Hello", new Cons[String]("Scala", Empty))
+
+  println(listOfIntegers2.printElements)
+
 }
